@@ -139,6 +139,13 @@ does not support vision. Disabling use_screenshot."""
             ans_dict["stack_trace"] = traceback.format_exc()
             ans_dict["n_retry"] = self.max_retry
 
+        # Save system_msg, prompt, and action to a file
+        with open("/Users/tamino/dev/agents/BrowserGym/output.txt", "a") as file:
+            file.write(f"System Message:\n{chat_messages[0]}\n\n")
+            file.write(f"Prompt:\n{chat_messages[1]}\n\n")
+            # file.write(f"Obs:\n{obs}\n\n")
+            file.write(f"Action:\n{ans_dict['action']}\n\n")
+
         self.actions.append(ans_dict["action"])
         self.memories.append(ans_dict.get("memory", None))
         self.thoughts.append(ans_dict.get("think", None))
