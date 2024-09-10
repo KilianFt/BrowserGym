@@ -3,7 +3,6 @@
 docs/src/generated/
 
 demo_agent/results
-notebooks/
 *_key.txt
 
 # Byte-compiled / optimized / DLL files
