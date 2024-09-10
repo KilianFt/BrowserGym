@@ -2,6 +2,10 @@
 .idea/
 docs/src/generated/
 
+demo_agent/results
+notebooks/
+*_key.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -139,3 +143,4 @@ error_logs.txt
 tests/results
 tmp.py
 .vscode/settings.json
+.github/workflows/*
